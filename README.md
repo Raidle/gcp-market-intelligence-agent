@@ -1,14 +1,15 @@
-Yahoo Finance API
-        ↓
-Cloud Scheduler (runs every hour)
-        ↓
-Cloud Function → fetches + drops CSV into GCS
-        ↓
-GCS trigger → another Cloud Function → loads into BigQuery
-        ↓
-ADK Agent on Cloud Run
-  ├── Tool: query_bigquery(sql)
-  ├── Tool: get_latest_price(ticker)
-  └── Tool: summarize_anomalies(date)
-        ↓
-Talk to it via a simple CLI or minimal web UI
+# MarketTranslator
+ 
+An AI agent that ingests live financial market data, stores it on Google Cloud Platform, and lets you query it in plain English. Instead of writing SQL or digging through spreadsheets, you just ask it things like *"what happened to crude oil futures last Friday?"* and it goes and finds out.
+ 
+Built to learn GCP infrastructure and Google's Agent Development Kit (ADK) end to end — data pipelines, cloud deployment, and conversational AI in one project.
+ 
+---
+ 
+## What It Does
+ 
+- Automatically pulls live market data (equities, futures) on a schedule
+- Stores and structures it in BigQuery for fast querying
+- Exposes a conversational AI agent that answers natural language questions about the data
+- Runs entirely on GCP — Cloud Functions, Cloud Run, BigQuery, and Pub/Sub wired together
+---
