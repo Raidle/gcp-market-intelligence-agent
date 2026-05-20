@@ -2,7 +2,7 @@
  
 An AI agent that ingests live financial market data, stores it on Google Cloud Platform, and lets you query it in plain English. Instead of writing SQL or digging through spreadsheets, you just ask it things like *"what happened to crude oil futures last Friday?"* and it goes and finds out.
  
-Built to learn GCP infrastructure and Google's Agent Development Kit (ADK) end to end — data pipelines, cloud deployment, and conversational AI in one project.
+Built to learn GCP infrastructure and Google's Agent Development Kit (ADK): data pipelines, cloud deployment, and conversational AI in one project.
  
 ---
  
